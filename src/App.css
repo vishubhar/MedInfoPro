@@ -1,0 +1,274 @@
+.App {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('/src/Assests/Images/Background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+
+  /* Ensuring the background image is translucent */
+  background-color: rgba(255, 255, 255, 0.9);
+  /* Adjust opacity as needed */
+}
+
+.Header {
+  font-size: 34px;
+  line-height: 36px;
+  font-weight: 700;
+  max-width: 100%;
+  color: #194349;
+}
+
+.Header2 {
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 50px;
+  font-weight: 700;
+  max-width: 100%;
+  color: #194349;
+}
+
+.search {
+  width: 90%;
+  max-width: 1099px;
+  background-color: #fff;
+  margin: 10px auto;
+  padding: 5px 20px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.123);
+}
+
+.search2 {
+  display: flex;
+  align-items: center;
+  color: #939a9b;
+  font-size: 17px;
+  font-weight: 400;
+  flex: 1;
+}
+
+.searchInput {
+  width: 70%;
+  max-width: 300px;
+  height: 22px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  flex: 1;
+  margin-right: 10px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #112D31;
+  font-weight: 700;
+  overflow-wrap: break-word;
+}
+
+.searchButton {
+  border: none;
+  background-color: #2a527a;
+  color: #fff;
+  font-weight: bold;
+  font-size: 17px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.line {
+  width: 90%;
+  max-width: 70%;
+  height: 1.4px;
+  margin: 40px auto;
+  background-color: rgba(0, 0, 0, 0.199);
+}
+
+.results {
+  width: 90%;
+  max-width: 1007px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resultItem {
+  width: 100%;
+  max-width: 100%;
+  height: 180px;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #fff;
+  background-image: linear-gradient(to right, #fff, #b3e1ff54);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.123);
+  align-items: center;
+}
+
+.leftresult {
+  flex: 1;
+  width: 100%;
+  max-width: 300px;
+  text-align: left;
+  font-size: 16px;
+  overflow-wrap: break-word;
+  /* Ensure text wraps to next line */
+  margin-left: 20px;
+}
+
+.midresult {
+  flex: 1;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  font-size: 16px;
+  overflow-wrap: break-word;
+  /* Ensure text wraps to next line */
+}
+
+.midresult p {
+  color: #2a527a;
+  font-size: 14px;
+  margin-top: -10px;
+}
+
+.rightresult {
+  flex: 1;
+  width: 100%;
+  max-width: 300px;
+  font-size: 30px;
+  color: #112D31;
+  font-weight: 1000;
+  overflow-wrap: break-word;
+  /* Ensure text wraps to next line */
+  text-align: right;
+  margin-right: 20px;
+}
+
+.rightresult h5 {
+  font-size: 15px;
+  margin: 0px;
+}
+
+.bottomText {
+  margin-top: 100px;
+  font-weight: 700;
+  color: #939a9b;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .Header {
+    font-size: 28px;
+    line-height: 30px;
+  }
+
+  .Header2 {
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 30px;
+  }
+
+  .searchInput {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .searchButton {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .leftresult,
+  .midresult,
+  .rightresult {
+    font-size: 12px;
+  }
+
+  .rightresult p {
+    font-size: 20px;
+  }
+
+  .rightresult h5 {
+    font-size: 14px;
+  }
+
+  .midresult p {
+    color: #2a527a;
+    font-size: 12px;
+    margin-top: -5px;
+  }
+
+  .midresult h3 {
+    font-size: 18px;
+  }
+
+  .bottomText {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .Header {
+    font-size: 24px;
+    line-height: 26px;
+    max-width: 80%;
+  }
+
+  .Header2 {
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 20px;
+    max-width: 80%;
+  }
+
+  .searchInput {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .searchButton {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .leftresult,
+  .midresult,
+  .rightresult {
+    font-size: 10px;
+    margin-right: 5px;
+    padding-right: 5px;
+  }
+
+  .rightresult p {
+    font-size: 12px;
+  }
+
+  .rightresult h5 {
+    font-size: 10px;
+  }
+
+  .midresult p {
+    color: #2a527a;
+    font-size: 10px;
+    margin-top: -5px;
+  }
+
+  .bottomText {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+}
