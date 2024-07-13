@@ -13,6 +13,7 @@ function App() {
     if (searchTerm && searched) {
       fetchData();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchTerm, searched]);
 
   async function fetchData() {
@@ -27,7 +28,6 @@ function App() {
 
       setResults(medicineSuggestions);
       setShowDiscountMessage(false);
-      setSearched(true);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -35,7 +35,6 @@ function App() {
 
   const handleSearch = () => {
     setSearched(true);
-    fetchData();
   };
 
   const handleInputChange = (e) => {
@@ -46,7 +45,6 @@ function App() {
   const handleKeyPress = (e) => {
     if (e.key === "Enter") {
       setSearched(true);
-      fetchData();
     }
   };
 
@@ -79,7 +77,7 @@ function App() {
       "Lozenge",
       "Mouthwash",
       "Suppository",
-      "Chewable Tablet"
+      "Chewable Tablet",
     ];
     return forms.find((form) => text && text.includes(form)) || "N/A";
   };
@@ -91,7 +89,6 @@ function App() {
     if (!match) return "N/A";
     return match.join(" + ").replace(/\+/g, " & ");
   };
-
 
   const trimSaltName = (saltFull) => {
     if (!saltFull) return "N/A";
