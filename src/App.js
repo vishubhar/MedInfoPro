@@ -90,12 +90,6 @@ function App() {
     return match.join(" + ").replace(/\+/g, " & ");
   };
 
-  const trimSaltName = (saltFull) => {
-    if (!saltFull) return "N/A";
-    const parts = saltFull.split(" ");
-    return parts.slice(0, -1).join(" ");
-  };
-
   const extractPackaging = (nameWithShortPack) => {
     if (!nameWithShortPack) return "N/A";
     const packaging = nameWithShortPack.split(" - ")[1];
@@ -108,11 +102,6 @@ function App() {
     const regex = /^(.*?)(?=\d|-)/;
     const match = trimmedName.match(regex);
     return match ? match[0] : trimmedName;
-  };
-
-  const handlePText = (text) => {
-    if (!text) return "N/A";
-    return text.replace(/\+/g, " & ");
   };
 
   return (
@@ -179,7 +168,6 @@ function App() {
               <div className="midresult">
                 <h3>{name}</h3>
                 <p>{result.salt_or_category.replace(/\+/g, " & ")}</p>
-                {/* <p>{handlePText(trimSaltName(result.salt_full))}</p> */}
               </div>
               <div className="rightresult">
                 <p>From ₹{result.mrp}</p>
